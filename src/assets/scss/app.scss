@@ -1,13 +1,79 @@
 // Compass
 @import "compass";
+@import "susy";
 
 // Resets
 @import "_normalize.scss"; // loaded from bower_components folder
 
 // App
 @import "includes/helpers";
+@import "includes/prism";
 
-// SMACSSsmacss (http://smacss.com/)
-@import "base/_base"; // Base
-@import "layout/_layout"; // Layout
-@import "modules/_modules"; // Modules
+// Variables (Colors and Typography) & Mixins
+// These are in this order because of variable dependencies
+@import "colors";
+@import "typography";
+@import "mixins";
+
+// Base
+@import "base";
+
+// Grid
+@import "grid";
+
+// UI
+@import "ui/navs";
+@import "ui/media";
+@import "ui/buttons";
+@import "ui/forms";
+@import "ui/code";
+@import "ui/other";
+
+// Project–specific
+@import "layout";
+
+$susy: (
+  gutters: 1,
+  math: fluid,
+  output: float,
+  gutter-position: split,
+ global-box-sizing: border-box
+);
+
+.nav-container {
+    @include container(12);
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-align: justify;
+
+        li {
+             text-transform: uppercase;
+             display: inline-block;
+             zoom: 1;
+        }
+
+        &:after{
+            content: "";
+            width: 100%;
+            display: inline-block;
+
+            zoom: 1;
+            *display: inline;
+        }
+    }
+
+    h2 {
+        @include span(3.5 of 12);
+    }
+
+    .primary-nav {
+        @include span(5 of 12);
+    }
+
+    .secondary-nav {
+        @include span(last 1.75 of 12);
+    }
+}
