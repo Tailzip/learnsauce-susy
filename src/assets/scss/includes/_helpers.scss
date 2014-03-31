@@ -1,0 +1,75 @@
+/*==========================================================================
+   MEDIA QUERIES // example @include respond-to(mobile) { }
+ ========================================================================== */
+
+  /*
+    @include respond-to(mobile) {}
+    @include respond-to(tablet) {}
+    @include respond-to(desktopSm) {}
+    @include respond-to(desktopLg) {}
+  */
+
+@mixin respond-to($media) {
+
+  @if $media == desktopLg {
+    $total-columns: 32;
+    @media only screen and (min-width: 1280px) { @content; }
+  }
+
+  @if $media == desktopSm {
+    $total-columns: 32;
+    @media only screen and (min-width: 1024px) and (max-width: 1279px) { @content; }
+  }
+
+  @if $media == tablet {
+    $total-columns: 24;
+    @media only screen and (min-width: 768px) and (max-width: 1023px) { @content; }
+  }
+
+  @if $media == mobile {
+    $total-columns: 16;
+    @media only screen and (max-width: 767px) { @content; }
+  }
+}
+
+/*==========================================================================
+   FUNCTIONS
+ ========================================================================== */
+
+// (em calculator)
+@function emCal($pixelBasedNum){
+  @return $pixelBasedNum / $emBase * 1em;
+}
+
+// column width in percent
+@function makeColumn($numOfCols,$context:$total-columns) {
+  @return ($numOfCols / $context) * 100%;
+}
+
+/*==========================================================================
+   MIXINS
+ ========================================================================== */
+
+@mixin border-radius($radius) { -webkit-border-radius: $radius; -moz-border-radius: $radius; border-radius: $radius; }
+@mixin box-sizing($type) { -webkit-box-sizing: $type; -moz-box-sizing: $type; box-sizing: $type; }
+@mixin transition($properties) {-moz-transition: $properties; -webkit-transition: $properties; -o-transition: $properties; transition: $properties;}
+@mixin transform($properties) {-webkit-transform: $properties; -moz-transform: $properties; -ms-transform: $properties; -o-transform: $properties; transform: $properties;}
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+// column width
+@mixin column_width($numOfCols,$context:$total-columns) {
+   width: makeColumn($numOfCols,$context);
+}
+
+// retina.. Higher display density
+@mixin highdpi($ratio) {
+  @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (-o-min-device-pixel-ratio: $ratio),
+  only screen and (min-resolution: $ratio*96 dpi) { @content; }
+}

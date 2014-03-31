@@ -1,0 +1,20 @@
+{
+  "name": "learnsauce-susy",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Tailzip/learnsauce-susy",
+  "authors": [
+    "Antoine <antoine@wondersauce.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "~3.0.0"
+  }
+}
