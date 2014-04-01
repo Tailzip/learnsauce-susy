@@ -56,6 +56,8 @@ gulp.task('scripts', ['coffee' , 'lintscripts'], function(){
 			// setup script sequence
 			paths.app + '/assets/js/vendor/jquery.js',
 			paths.app + '/assets/js/plugins.js',
+			paths.app + '/assets/js/prism.js',
+			paths.app + '/assets/js/fittext.js',
 			paths.app + '/assets/js/main.js'
 		])
 		.pipe($.concat('app.js'))
@@ -90,8 +92,8 @@ gulp.task('jade', function(){
 gulp.task('markup', [ 'jade' ] , function(){
 	return gulp.src(paths.app + '/**/*.html')
 		.pipe($.htmlReplace({
-			'styles': 'css/app.min.css',
-			'scripts': 'js/app.min.js'
+			'styles': 'assets/css/app.min.css',
+			'scripts': 'assets/js/app.min.js'
 		}))
 		.pipe($.htmlPrettify({
 			indent_char: '	', indent_size: 1

@@ -2284,7 +2284,7 @@ hr {
 #susy-gallery img {
   width: 29.16667%;
   float: left;
-  margin-bottom: 6.25%;
+  margin-bottom: 4%;
 }
 /* line 63, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/language/susy/_gallery.scss */
 #susy-gallery img:nth-child(3n + 1) {

@@ -78,16 +78,16 @@ $susy: (
 }*/
 
 // small grid: (columns: 12, gutters: 1em, column-width: 4em);
-$small: layout(12 (4em 1em) show );
+$small: layout(12 (4em 1em) show);
 
 // medium grid: (columns: 12, gutters: ratio 1/2, column-width: 4em);
-$medium: layout(12  1/2 show );
+$medium: layout(12  1/2 show);
 
 // large grid: (columns: 12, gutters: 10px, column-width: 60px);
-$large: layout(12 (60px 50px) show );
+$large: layout(12 (60px 50px) show);
 
 // x-large grid: (columns: 12, gutters: .25 ratio);
-$x-large: layout(12 .25 show );
+$x-large: layout(12 .25 show);
 
 #susy-container-1 {
 
@@ -326,7 +326,7 @@ $x-large: layout(12 .25 show );
 
       img {
         @include gallery(4 of 12);
-        margin-bottom: gutter();
+        margin-bottom: 4%;
       }
 }
 
