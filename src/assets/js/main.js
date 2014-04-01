@@ -1,3 +1,3 @@
 $(function(){
-    // JS stuff here
+    $(".heading").fitText();
 });
