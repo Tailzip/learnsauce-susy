@@ -1,6 +1,7 @@
 // Compass
 @import "compass";
 @import "susy";
+@import "breakpoint";
 
 // Resets
 @import "_normalize.scss"; // loaded from bower_components folder
@@ -34,46 +35,301 @@
 
 $susy: (
   gutters: 1,
-  math: fluid,
-  output: float,
   gutter-position: split,
- global-box-sizing: border-box
+  global-box-sizing: border-box
 );
 
-.nav-container {
-    @include container(12);
+/*.nav-container {
+    @include container(12 show);
 
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        text-align: justify;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: justify;
 
-        li {
-             text-transform: uppercase;
-             display: inline-block;
-             zoom: 1;
+            li {
+                 text-transform: uppercase;
+                 display: inline-block;
+                 zoom: 1;
+            }
+
+            &:after{
+                content: "";
+                width: 100%;
+                display: inline-block;
+
+                zoom: 1;
+                *display: inline;
+            }
         }
 
-        &:after{
-            content: "";
-            width: 100%;
-            display: inline-block;
-
-            zoom: 1;
-            *display: inline;
+        h2 {
+            @include span(3.5 of 12);
         }
-    }
 
-    h2 {
-        @include span(3.5 of 12);
-    }
+        .primary-nav {
+            @include span(5 of 12);
+        }
 
-    .primary-nav {
-        @include span(5 of 12);
-    }
+        .secondary-nav {
+            @include span(last 1.75 of 12);
+        }
+}*/
 
-    .secondary-nav {
-        @include span(last 1.75 of 12);
-    }
+// small grid: (columns: 12, gutters: 1em, column-width: 4em);
+$small: layout(12 (4em 1em) show );
+
+// medium grid: (columns: 12, gutters: ratio 1/2, column-width: 4em);
+$medium: layout(12  1/2 show );
+
+// large grid: (columns: 12, gutters: 10px, column-width: 60px);
+$large: layout(12 (60px 50px) show );
+
+// x-large grid: (columns: 12, gutters: .25 ratio);
+$x-large: layout(12 .25 show );
+
+#susy-container-1 {
+
+      header, nav, article, footer { font-weight: bold; color: #fff; height: 100px; text-align: center; line-height: 100px; background: rgba(0,0,0,.4); }
+      padding: 25px 0;
+      margin-bottom: 25px;
+
+      @include susy-breakpoint(40em, $small) {
+        @include container();
+
+        header { @include span(2); }
+        nav { @include span(4); }
+        article { @include span(4); }
+        footer { @include span(2); }
+
+      }
+
+      @include susy-breakpoint(50em, $medium) {
+        @include container();
+
+        header { @include span(1); }
+        nav { @include span(1); }
+        article { @include span(2); }
+        footer { @include span(2 last); }
+
+      }
+
+      @include susy-breakpoint(60em, $large) {
+        @include container();
+
+        header { @include span(5); }
+        nav { @include span(2); }
+        article { @include span(2); }
+        footer { @include span(3); }
+      }
+
+      @include susy-breakpoint(70em, $x-large) {
+        @include container();
+
+        header { @include span(3); }
+        nav { @include span(3); }
+        article { @include span(3); }
+        footer { @include span(3); }
+      }
+}
+
+#susy-container-2 {
+      header, nav, article, footer { font-weight: bold; color: #fff; height: 100px; text-align: center; line-height: 100px; background: rgba(0,0,0,.4); }
+      padding: 25px 0;
+      margin-bottom: 25px;
+
+      @include container(12 show);
+
+      @include nested(12) {
+        header { @include span(2); }
+        nav { @include span(3); }
+        article { @include span(4); }
+        footer { @include span(20%); }
+      }
+}
+
+#susy-container-3 {
+      header, nav, article, footer { font-weight: bold; color: #fff; height: 200px; text-align: center; line-height: 100px; background: rgba(0,0,0,.4); }
+      padding: 25px 0;
+      margin-bottom: 25px;
+
+      @include container(12 show);
+
+      header { @include span(2 of 12); }
+      nav {
+        @include span(4 of 12) {
+
+          ul {
+          margin: 0; padding: 0;
+          list-style-type: none;
+           li { @include span(2); background: rgba(70,70,70, .5); }
+          }
+        }
+      }
+      article { @include span(4 of 12); }
+      footer { @include span(2 of 12); }
+}
+
+#susy-container-4 {
+      header, nav, article, footer { font-weight: bold; color: #fff; height: 200px; text-align: center; line-height: 100px; background: rgba(0,0,0,.4); }
+      padding: 25px 0;
+      margin-bottom: 25px;
+
+      @include container(12 show);
+
+      header { @include span(2 of 12); }
+      nav {
+        @include span(4 of 12 nest) {
+
+          ul {
+          margin: 0; padding: 0;
+          list-style-type: none;
+           li { @include span(2); background: rgba(70,70,70, .5); }
+          }
+        }
+      }
+      article { @include span(4 of 12); }
+      footer { @include span(2 of 12); }
+}
+
+#susy-container-5 {
+      header, nav, article, footer { font-weight: bold; color: #fff; height: 100px; text-align: center; line-height: 100px; background: rgba(0,0,0,.4); }
+      padding: 25px 0;
+      margin-bottom: 25px;
+
+      @include container(12 show);
+
+      @include nested(12) {
+        header { @include span(isolate 500px at 25%); }
+        nav { @include span(isolate 3 at 10); }
+      }
+}
+
+#susy-container-6 {
+      header, nav, article, footer { font-weight: bold; color: #fff; height: 100px; text-align: center; line-height: 100px; background: rgba(0,0,0,.4); margin-bottom: 20px;}
+      article {margin-bottom: 0;}
+      padding: 25px 0;
+      margin-bottom: 25px;
+
+      @include container(12 show);
+
+      @include nested(12) {
+        header { @include span(3); }
+        nav { @include span(3 wide break); }
+        article { @include span(3 wider break); }
+      }
+}
+
+#susy-container-7 {
+      header, nav, article, footer { font-weight: bold; color: #fff; height: 100px; text-align: center; line-height: 100px; background: rgba(0,0,0,.4); }
+      padding: 25px 0;
+      margin-bottom: 25px;
+
+      @include container(12 show);
+
+      @include nested(12) {
+        header { @include span(3); }
+        nav {
+            float:left;
+            width: span(3);
+            margin: 0 gutter();
+        }
+        article {
+          float:left;
+          width: span(3);
+          @include gutters();
+        }
+        footer {
+            float:left;
+            width: span(3);
+            // @include gutters(12 1/3 after);
+            @include gutters();
+        }
+      }
+}
+
+#susy-container-8 {
+      header, nav, article, footer { font-weight: bold; color: #fff; height: 100px; text-align: center; line-height: 100px; background: rgba(0,0,0,.4); }
+      padding: 25px 0 0;
+
+      @include layout(before);
+      @include container(12 show-columns);
+
+      @include nested(12) {
+        header { @include span(first 3); }
+        nav { @include span(9); }
+        article { @include span(3 break); }
+        footer { @include span(9); }
+      }
+}
+
+#susy-container-9 {
+      header, nav, article, footer { font-weight: bold; color: #fff; height: 100px; text-align: center; line-height: 100px; background: rgba(0,0,0,.4); }
+      padding: 25px 0 0;
+
+      @include layout(after);
+      @include container(12 show-columns);
+
+      @include nested(12) {
+        header { @include span(9); }
+        nav { @include span(last 3); }
+        article { @include span(9 break); }
+        footer { @include span(3); }
+      }
+}
+
+#susy-container-10 {
+      header, nav, article, footer { font-weight: bold; color: #fff; height: 100px; text-align: center; line-height: 100px; background: rgba(0,0,0,.4); }
+      padding: 20px 0 25px;
+      margin-bottom: 25px;
+
+      @include container(12 show-columns);
+
+      @include nested(12) {
+        header { @include span(full); }
+      }
+}
+
+#susy-container-11 {
+      header, nav, article, footer { font-weight: bold; color: #fff; height: 100px; text-align: center; line-height: 100px; background: rgba(0,0,0,.4);}
+      padding: 25px 0;
+      margin-bottom: 25px;
+
+      @include layout(split);
+      @include container(12 show);
+
+      @include nested(12) {
+        header {
+          @include span(3);
+        }
+        nav {
+          @include span(3);
+          @include bleed-y(1%);
+        }
+        article {
+          @include span(3);
+          @include bleed-x(1em);
+
+        }
+        footer {
+          @include span(3);
+        }
+      }
+}
+
+#susy-gallery {
+      header, nav, article, footer { font-weight: bold; color: #fff; height: 100px; text-align: center; line-height: 100px; background: rgba(0,0,0,.4); margin-bottom: 20px;}
+      padding: 25px 0;
+      margin-bottom: 25px;
+      @include container(12 show);
+
+      img {
+        @include gallery(4 of 12);
+        margin-bottom: gutter();
+      }
+}
+
+#site-footer {
+  height:5em;
 }

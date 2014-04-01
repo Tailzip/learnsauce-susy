@@ -6,7 +6,7 @@
 *:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 
@@ -29,7 +29,6 @@ html {
 body {
     // For now, this is !important because the ::selection (below) affects the background color in IE
     background-color: #fff !important;
-    padding: 0;
     color: $color-text;
     min-height: 100%;
     width: 100%;

@@ -828,7 +828,6 @@ html {
 /* line 29, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/_base.scss */
 body {
   background-color: #fff !important;
-  padding: 0;
   color: #333333;
   min-height: 100%;
   width: 100%;
@@ -1437,57 +1436,876 @@ hr {
   height: 10em;
 }
 
-/* line 43, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
-.nav-container {
+/*.nav-container {
+    @include container(12 show);
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: justify;
+
+            li {
+                 text-transform: uppercase;
+                 display: inline-block;
+                 zoom: 1;
+            }
+
+            &:after{
+                content: "";
+                width: 100%;
+                display: inline-block;
+
+                zoom: 1;
+                *display: inline;
+            }
+        }
+
+        h2 {
+            @include span(3.5 of 12);
+        }
+
+        .primary-nav {
+            @include span(5 of 12);
+        }
+
+        .secondary-nav {
+            @include span(last 1.75 of 12);
+        }
+}*/
+/* line 92, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-1 {
+  padding: 25px 0;
+  margin-bottom: 25px;
+}
+/* line 94, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-1 header, #susy-container-1 nav, #susy-container-1 article, #susy-container-1 footer {
+  font-weight: bold;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.4);
+}
+@media (min-width: 40em) {
+  /* line 92, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 {
+    max-width: 60em;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 10%, rgba(102, 102, 255, 0.25) 10%, rgba(179, 179, 255, 0.25) 90%, rgba(0, 0, 0, 0) 90%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(102, 102, 255, 0.25) 10%, rgba(179, 179, 255, 0.25) 90%, rgba(0, 0, 0, 0) 90%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+    background-size: 8.33333%, 100% 24px;
+    background-origin: content-box, border-box;
+    background-clip: content-box, border-box;
+    background-position: left top;
+  }
+  /* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+  #susy-container-1::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  /* line 101, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 header {
+    width: 15%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+  /* line 102, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 nav {
+    width: 31.66667%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+  /* line 103, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 article {
+    width: 31.66667%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+  /* line 104, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 footer {
+    width: 15%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+}
+@media (min-width: 50em) {
+  /* line 92, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 16.66667%, rgba(102, 102, 255, 0.25) 16.66667%, rgba(179, 179, 255, 0.25) 83.33333%, rgba(0, 0, 0, 0) 83.33333%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 16.66667%, rgba(102, 102, 255, 0.25) 16.66667%, rgba(179, 179, 255, 0.25) 83.33333%, rgba(0, 0, 0, 0) 83.33333%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+    background-size: 8.33333%, 100% 24px;
+    background-origin: content-box, border-box;
+    background-clip: content-box, border-box;
+    background-position: left top;
+  }
+  /* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+  #susy-container-1::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  /* line 111, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 header {
+    width: 5.55556%;
+    float: left;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%;
+  }
+  /* line 112, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 nav {
+    width: 5.55556%;
+    float: left;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%;
+  }
+  /* line 113, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 article {
+    width: 13.88889%;
+    float: left;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%;
+  }
+  /* line 114, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 footer {
+    width: 13.88889%;
+    float: right;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%;
+  }
+}
+@media (min-width: 60em) {
+  /* line 92, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 22.72727%, rgba(102, 102, 255, 0.25) 22.72727%, rgba(179, 179, 255, 0.25) 77.27273%, rgba(0, 0, 0, 0) 77.27273%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 22.72727%, rgba(102, 102, 255, 0.25) 22.72727%, rgba(179, 179, 255, 0.25) 77.27273%, rgba(0, 0, 0, 0) 77.27273%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+    background-size: 8.33333%, 100% 24px;
+    background-origin: content-box, border-box;
+    background-clip: content-box, border-box;
+    background-position: left top;
+  }
+  /* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+  #susy-container-1::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  /* line 121, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 header {
+    width: 37.87879%;
+    float: left;
+    margin-left: 1.89394%;
+    margin-right: 1.89394%;
+  }
+  /* line 122, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 nav {
+    width: 12.87879%;
+    float: left;
+    margin-left: 1.89394%;
+    margin-right: 1.89394%;
+  }
+  /* line 123, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 article {
+    width: 12.87879%;
+    float: left;
+    margin-left: 1.89394%;
+    margin-right: 1.89394%;
+  }
+  /* line 124, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 footer {
+    width: 21.21212%;
+    float: left;
+    margin-left: 1.89394%;
+    margin-right: 1.89394%;
+  }
+}
+@media (min-width: 70em) {
+  /* line 92, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 10%, rgba(102, 102, 255, 0.25) 10%, rgba(179, 179, 255, 0.25) 90%, rgba(0, 0, 0, 0) 90%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(102, 102, 255, 0.25) 10%, rgba(179, 179, 255, 0.25) 90%, rgba(0, 0, 0, 0) 90%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+    background-size: 8.33333%, 100% 24px;
+    background-origin: content-box, border-box;
+    background-clip: content-box, border-box;
+    background-position: left top;
+  }
+  /* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+  #susy-container-1::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  /* line 130, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 header {
+    width: 23.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+  /* line 131, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 nav {
+    width: 23.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+  /* line 132, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 article {
+    width: 23.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+  /* line 133, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+  #susy-container-1 footer {
+    width: 23.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+}
+
+/* line 137, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-2 {
+  padding: 25px 0;
+  margin-bottom: 25px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-size: 8.33333%, 100% 24px;
+  background-origin: content-box, border-box;
+  background-clip: content-box, border-box;
+  background-position: left top;
+}
+/* line 138, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-2 header, #susy-container-2 nav, #susy-container-2 article, #susy-container-2 footer {
+  font-weight: bold;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.4);
 }
 /* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
-.nav-container::after {
+#susy-container-2::after {
   content: " ";
   display: block;
   clear: both;
 }
-/* line 46, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
-.nav-container ul {
+/* line 145, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-2 header {
+  width: 12.5%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+/* line 146, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-2 nav {
+  width: 20.83333%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+/* line 147, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-2 article {
+  width: 29.16667%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+/* line 148, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-2 footer {
+  width: 20%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+
+/* line 152, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-3 {
+  padding: 25px 0;
+  margin-bottom: 25px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-size: 8.33333%, 100% 24px;
+  background-origin: content-box, border-box;
+  background-clip: content-box, border-box;
+  background-position: left top;
+}
+/* line 153, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-3 header, #susy-container-3 nav, #susy-container-3 article, #susy-container-3 footer {
+  font-weight: bold;
+  color: #fff;
+  height: 200px;
+  text-align: center;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+#susy-container-3::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 159, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-3 header {
+  width: 12.5%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+/* line 160, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-3 nav {
+  width: 29.16667%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+/* line 163, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-3 nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  text-align: justify;
 }
-/* line 52, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
-.nav-container ul li {
-  text-transform: uppercase;
-  display: inline-block;
-  zoom: 1;
+/* line 166, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-3 nav ul li {
+  width: 37.5%;
+  float: left;
+  margin-left: 6.25%;
+  margin-right: 6.25%;
+  background: rgba(70, 70, 70, 0.5);
 }
-/* line 58, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
-.nav-container ul:after {
-  content: "";
-  width: 100%;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
+/* line 170, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-3 article {
+  width: 29.16667%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
 }
-/* line 68, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
-.nav-container h2 {
+/* line 171, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-3 footer {
+  width: 12.5%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+
+/* line 174, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-4 {
+  padding: 25px 0;
+  margin-bottom: 25px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-size: 8.33333%, 100% 24px;
+  background-origin: content-box, border-box;
+  background-clip: content-box, border-box;
+  background-position: left top;
+}
+/* line 175, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-4 header, #susy-container-4 nav, #susy-container-4 article, #susy-container-4 footer {
+  font-weight: bold;
+  color: #fff;
+  height: 200px;
+  text-align: center;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+#susy-container-4::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 181, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-4 header {
+  width: 12.5%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+/* line 182, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-4 nav {
+  width: 33.33333%;
+  float: left;
+}
+/* line 185, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-4 nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* line 188, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-4 nav ul li {
+  width: 37.5%;
+  float: left;
+  margin-left: 6.25%;
+  margin-right: 6.25%;
+  background: rgba(70, 70, 70, 0.5);
+}
+/* line 192, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-4 article {
+  width: 29.16667%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+/* line 193, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-4 footer {
+  width: 12.5%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+
+/* line 196, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-5 {
+  padding: 25px 0;
+  margin-bottom: 25px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-size: 8.33333%, 100% 24px;
+  background-origin: content-box, border-box;
+  background-clip: content-box, border-box;
+  background-position: left top;
+}
+/* line 197, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-5 header, #susy-container-5 nav, #susy-container-5 article, #susy-container-5 footer {
+  font-weight: bold;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+#susy-container-5::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 204, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-5 header {
+  width: 500px;
+  float: left;
+  margin-left: 27.08333%;
+  margin-right: -100%;
+}
+/* line 205, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-5 nav {
+  width: 20.83333%;
+  float: left;
+  margin-left: 77.08333%;
+  margin-right: -100%;
+}
+
+/* line 209, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-6 {
+  padding: 25px 0;
+  margin-bottom: 25px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-size: 8.33333%, 100% 24px;
+  background-origin: content-box, border-box;
+  background-clip: content-box, border-box;
+  background-position: left top;
+}
+/* line 210, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-6 header, #susy-container-6 nav, #susy-container-6 article, #susy-container-6 footer {
+  font-weight: bold;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+/* line 211, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-6 article {
+  margin-bottom: 0;
+}
+/* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+#susy-container-6::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 218, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-6 header {
+  width: 20.83333%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+/* line 219, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-6 nav {
+  clear: both;
   width: 25%;
   float: left;
   margin-left: 2.08333%;
   margin-right: 2.08333%;
 }
-/* line 72, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
-.nav-container .primary-nav {
-  width: 37.5%;
+/* line 220, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-6 article {
+  clear: both;
+  width: 29.16667%;
   float: left;
   margin-left: 2.08333%;
   margin-right: 2.08333%;
 }
-/* line 76, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
-.nav-container .secondary-nav {
-  width: 10.41667%;
-  float: right;
+
+/* line 224, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-7 {
+  padding: 25px 0;
+  margin-bottom: 25px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-size: 8.33333%, 100% 24px;
+  background-origin: content-box, border-box;
+  background-clip: content-box, border-box;
+  background-position: left top;
+}
+/* line 225, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-7 header, #susy-container-7 nav, #susy-container-7 article, #susy-container-7 footer {
+  font-weight: bold;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+#susy-container-7::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 232, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-7 header {
+  width: 20.83333%;
+  float: left;
   margin-left: 2.08333%;
   margin-right: 2.08333%;
+}
+/* line 233, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-7 nav {
+  float: left;
+  width: 20.83333%;
+  margin: 0 2.08333%;
+}
+/* line 238, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-7 article {
+  float: left;
+  width: 20.83333%;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+/* line 243, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-7 footer {
+  float: left;
+  width: 20.83333%;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+
+/* line 252, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-8 {
+  padding: 25px 0 0;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 50%, rgba(0, 0, 0, 0) 50%);
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 8.69565%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top;
+}
+/* line 253, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-8 header, #susy-container-8 nav, #susy-container-8 article, #susy-container-8 footer {
+  font-weight: bold;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+#susy-container-8::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 260, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-8 header {
+  width: 21.73913%;
+  float: left;
+}
+/* line 261, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-8 nav {
+  width: 73.91304%;
+  float: left;
+  margin-left: 4.34783%;
+}
+/* line 262, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-8 article {
+  clear: both;
+  width: 21.73913%;
+  float: left;
+  margin-left: 4.34783%;
+}
+/* line 263, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-8 footer {
+  width: 73.91304%;
+  float: left;
+  margin-left: 4.34783%;
+}
+
+/* line 267, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-9 {
+  padding: 25px 0 0;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 50%, rgba(0, 0, 0, 0) 50%);
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 8.69565%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top;
+}
+/* line 268, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-9 header, #susy-container-9 nav, #susy-container-9 article, #susy-container-9 footer {
+  font-weight: bold;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+#susy-container-9::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 275, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-9 header {
+  width: 73.91304%;
+  float: left;
+  margin-right: 4.34783%;
+}
+/* line 276, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-9 nav {
+  width: 21.73913%;
+  float: right;
+}
+/* line 277, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-9 article {
+  clear: both;
+  width: 73.91304%;
+  float: left;
+  margin-right: 4.34783%;
+}
+/* line 278, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-9 footer {
+  width: 21.73913%;
+  float: left;
+  margin-right: 4.34783%;
+}
+
+/* line 282, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-10 {
+  padding: 20px 0 25px;
+  margin-bottom: 25px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 50%, rgba(0, 0, 0, 0) 50%);
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 50%, rgba(0, 0, 0, 0) 50%);
+  background-size: 8.69565%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top;
+}
+/* line 283, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-10 header, #susy-container-10 nav, #susy-container-10 article, #susy-container-10 footer {
+  font-weight: bold;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+#susy-container-10::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 290, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-10 header {
+  width: 100%;
+  float: left;
+}
+
+/* line 294, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-11 {
+  padding: 25px 0;
+  margin-bottom: 25px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-size: 8.33333%, 100% 24px;
+  background-origin: content-box, border-box;
+  background-clip: content-box, border-box;
+  background-position: left top;
+}
+/* line 295, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-11 header, #susy-container-11 nav, #susy-container-11 article, #susy-container-11 footer {
+  font-weight: bold;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+#susy-container-11::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 303, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-11 header {
+  width: 20.83333%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+/* line 306, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-11 nav {
+  width: 20.83333%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin-top: -1%;
+  margin-bottom: -1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+/* line 310, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-11 article {
+  width: 20.83333%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+/* line 315, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-container-11 footer {
+  width: 20.83333%;
+  float: left;
+  margin-left: 2.08333%;
+  margin-right: 2.08333%;
+}
+
+/* line 321, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-gallery {
+  padding: 25px 0;
+  margin-bottom: 25px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 25%, rgba(102, 102, 255, 0.25) 25%, rgba(179, 179, 255, 0.25) 75%, rgba(0, 0, 0, 0) 75%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+  background-size: 8.33333%, 100% 24px;
+  background-origin: content-box, border-box;
+  background-clip: content-box, border-box;
+  background-position: left top;
+}
+/* line 322, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-gallery header, #susy-gallery nav, #susy-gallery article, #susy-gallery footer {
+  font-weight: bold;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background: rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+/* line 12, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/output/support/_clearfix.scss */
+#susy-gallery::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 327, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#susy-gallery img {
+  width: 29.16667%;
+  float: left;
+  margin-bottom: 6.25%;
+}
+/* line 63, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/language/susy/_gallery.scss */
+#susy-gallery img:nth-child(3n + 1) {
+  margin-left: 2.08333%;
+  margin-right: -100%;
+  clear: both;
+}
+/* line 63, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/language/susy/_gallery.scss */
+#susy-gallery img:nth-child(3n + 2) {
+  margin-left: 35.41667%;
+  margin-right: -100%;
+  clear: none;
+}
+/* line 63, /Users/antoinetanzilli/.rvm/gems/ruby-2.1.1/gems/susy-2.1.1/sass/susy/language/susy/_gallery.scss */
+#susy-gallery img:nth-child(3n + 3) {
+  margin-left: 68.75%;
+  margin-right: -100%;
+  clear: none;
+}
+
+/* line 333, /Users/antoinetanzilli/Projects/learnsauce-susy/src/assets/scss/app.scss */
+#site-footer {
+  height: 5em;
 }
